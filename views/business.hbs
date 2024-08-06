@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Your Driver</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/customStyle.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <script src="https://kit.fontawesome.com/6e6e5e1f4c.js"></script>
+</head>
+<body>
+
+<header>
+	{{>navbar data=details}}
+</header>
+
+
+
+    	<!-- section book cab-->
+		<main></main>
+	<section class="bookcab " id="book-section">
+		
+		<div class="container container-shadow">
+			<div class="row">
+				<div class="col-md-5 padding70 bg-white">
+					<div class="short-intro">
+						<h4 class="bookcab-heading"> Join<small> Us </small>
+						<br> <span>Start Earning Immediately</span>
+						</h4>
+						<p>You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly.  </p>
+					<blockquote class="custom-blockquote"><i class="bb"> Start working with Driverly that can provide you affordable services. </i> </blockquote>
+					<ul class="list">
+						<li>Regular Trip</li>
+						<li>Good Earning</li>
+						<li>Ontime Payment</li>
+						<li>Flexible Timing</li>
+						<li>Live Tracking</li>
+					</ul>
+					<div class="buttons">
+						<a type="button" action="get"class="btn btn-warning btn-cus" href="/services">VIEW SERVICES</a>  <a type="button"action="get" class="btn btn-light btn-cus" href="/login">REGISTER NOW</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-7 padding70 bg-yellow">
+				<form action="/driver_details" method="post" enctype="multipart/form-data" role="form">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<div class="btn-group" role="group">
+									<select name="vehicle"><button id="btnGroupDrop1" type="button" class="btn dropdown-toggle btn-default bs-placeholder btn-default-custom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Select Vehicle
+									</button>
+									<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+										<option class="dropdown-item" value="Hatchback">Hatchback</option>
+										<option class="dropdown-item" value="Sedan">Sedan</option>
+										<option class="dropdown-item" value="SUV">SUV</option>
+										
+									</div>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<div class="btn-group" role="group">
+									<select name="gear">
+									<button id="btnGroupDrop1" type="button" class="btn dropdown-toggle btn-default bs-placeholder btn-default-custom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Gear type
+									</button>
+									<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+										<option class="dropdown-item" value="Automatic">Automatic</option>
+										<option class="dropdown-item" value="Manual">Manual</option>
+										<option class="dropdown-item" value="Manual">Both</option>
+									</div>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<input type="text" name="name" class="form-input" placeholder="Full Name">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<input type="text" name="contactno" class="form-input " placeholder="Phone No.">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<input type="text" name="email" class="form-input" placeholder="Email">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<input type="text" name="city" class="form-input " placeholder="City">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<label for="formFileMultiple" class="form-label">Aadhar Front</label>
+								<input type="file" name="aadhar_F" class="form-input" required>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<label for="formFileMultiple" class="form-label">Aadhar Back</label>
+								<input type="file" name="aadhar_B" class="form-input" required>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<label for="formFileMultiple" class="form-label">Licence Front</label>
+								<input type="file" name="licence_F" class="form-input" required>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<label for="formFileMultiple" class="form-label">Licence Back</label>
+								<input type="file" name="licence_B" class="form-input" required>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<label for="formFileMultiple" class="form-label">Your Photo</label>
+								<input type="file" name="profile" class="form-input" required>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<input type="text" name="age" class="form-input " placeholder="Age">
+							</div>
+						</div>	
+					</div>
+					<div class="col-sm-12 ">
+						<div class="buttons">
+							<button type="submit" class="btn btn-light btn-cus">Submit</button>
+							<button type="button" class="btn btn-danger btn-cus">RESET </button>
+						</div>
+					</div>
+					
+					
+				</form>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+

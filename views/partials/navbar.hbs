@@ -1,0 +1,21 @@
+<nav class="navbar py-4 border-bottom fixed-top navbar-expand-lg navbar-light  " style="background: #feeb03">
+				<a class="navbar-brand" href="#">
+					
+					<span class="nav-logo-text">{{data.webName}}</span>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<div class="mr-auto"></div>
+					<ul class="navbar-nav">
+                        {{#each     data.links}}
+						<li class="nav-item active">
+							<a class="nav-link" href="{{this.url}}">{{this.label}}<span class="sr-only">(current)</span></a>
+						</li>
+						
+						{{/each}}
+					</ul>
+				</div>
+			</nav>
+ 

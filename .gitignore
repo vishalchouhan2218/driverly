@@ -1,0 +1,17 @@
+# Ignore all .log files
+*.log
+
+# Ignore all files in the build directory
+build/
+
+# Ignore all files with .tmp extension
+*.tmp
+
+# Ignore specific file
+config/database.yml
+
+# Ignore all files in node_modules directory
+node_modules/
+
+# Ignore .env files
+.env

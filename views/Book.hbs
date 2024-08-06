@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Your Driver</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/customStyle.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <script src="https://kit.fontawesome.com/6e6e5e1f4c.js"></script>
+</head>
+<body>
+
+<header>
+	{{>navbar data=details}}
+</header>
+
+
+
+    	<!-- section book cab-->
+		<main></main>
+	<section class="bookcab " id="book-section">
+		
+		<div class="container container-shadow">
+			<div class="row">
+				<div class="col-md-5 padding70 bg-white">
+					<div class="short-intro">
+						<h4 class="bookcab-heading"> book <small> a Driver</small>
+						<br> <span>DRIVERLY</span>
+						</h4>
+						<p>Hire professional drivers, and all car services at your fingertips with superior safety ensured by our professional partners </p>
+					<blockquote class="custom-blockquote"><i class="bb"> Start working with Driverly that can provide you services. </i> </blockquote>
+					<ul class="list">
+						<li>Super & reliable services</li>
+						<li>24 X 7 customer support provide</li>
+						<li>Large Range of Captain</li>
+						<li>GPS Tracking and help</li>
+						<li>Powerful Security Offer</li>
+					</ul>
+					<div class="buttons">
+						<a type="button" action="get"class="btn btn-warning btn-cus" href="/services">VIEW SERVICES</a>  <a type="button"action="get" class="btn btn-light btn-cus" href="/login">REGISTER NOW</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-7 padding70 bg-yellow">
+				<form action="/booking" method="post">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<div class="btn-group" role="group">
+									<select name="vehicle"><button id="btnGroupDrop1" type="button" class="btn dropdown-toggle btn-default bs-placeholder btn-default-custom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Select Vehicle
+									</button>
+									<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+										<option class="dropdown-item" value="Hatchback">Hatchback</option>
+										<option class="dropdown-item" value="Sedan">Sedan</option>
+										<option class="dropdown-item" value="SUV">SUV</option>
+										
+									</div>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<div class="btn-group" role="group">
+									<select name="passenger">
+									<button id="btnGroupDrop1" type="button" class="btn dropdown-toggle btn-default bs-placeholder btn-default-custom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Passengers
+									</button>
+									<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+									<option class="dropdown-item" value="1">1</option>
+										<option class="dropdown-item" value="2">2</option>
+										<option class="dropdown-item" value="3">3</option>
+									</div>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<input type="text" name="location_pickup" class="form-input" placeholder="Pickup location">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<input type="text" name="date" class="form-input " placeholder="Date and Time">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<input type="text" name="location_drop" class="form-input " placeholder="Drop of Location">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="btn-group bootstrap-select input-group-btn form-control dropup">
+								<div class="btn-group" role="group">
+									<select name="trip">
+									<button id="btnGroupDrop1" type="button" class="btn dropdown-toggle btn-default bs-placeholder btn-default-custom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Choose Trip
+									</button>
+									<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+										<option class="dropdown-item" value="Round Trip">Round Trip</option>
+										<option class="dropdown-item" value="One Way Trip">One Way Trip</option>
+									
+									</div>
+									</select>
+								</div>
+							</div>
+						</div>		
+					</div>
+					
+					<div class="section-second cabbook">
+						<div class="col-sm-12 ">
+							<div class="col-sm-4 ">
+								<div class="pkg-item">
+									<h6 class="cab-book-heading"><i class="fas fa-taxi"></i> REGULAR <br> <small>Manual</small></h6>
+									<input type="radio" name="package" class="form-check-input checkbox-emboss" value= " Regularcab " id="package">
+									
+									<div class="pkg-price">
+										<h2>RS 20</h2>
+										<h5> for 1KM</h5>
+										<small>1 Passanger</small>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4 ">
+								<div class="pkg-item">
+									<h6 class="cab-book-heading"><i class="fas fa-taxi"></i> REGULAR <br> <small>Automatic</small></h6>
+									<input type="radio" name="package" class="form-check-input checkbox-emboss" value= " Regularcab " id="package">
+									
+									<div class="pkg-price">
+										<h2>RS 20</h2>
+										<h5> for 1KM</h5>
+										<small>1 Passanger</small>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-sm-4">
+								<h6 class="cab-book-heading">
+								<i class="fas fa-taxi"></i> REGULAR <br> <small>EV</small></h6>
+								<input type="radio" name="package" class="form-check-input checkbox-emboss" value= " Regularcab " id="package">
+								
+								<div class="pkg-price">
+									<h2>RS 20</h2>
+									<h5> for 1KM</h5>
+									<small>1 Passanger</small>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 ">
+						<div class="buttons">
+							<button type="submit" class="btn btn-light btn-cus">SUBMIT FORM</button>
+							<button type="button" class="btn btn-danger btn-cus">RESET </button>
+							
+						</div>
+					</div>
+					
+					
+				</form>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+<!--
+<?php
+include "Book.php";
+?>-->
